@@ -1,0 +1,10 @@
+{{ define "main" }}
+ This is the list template
+
+ 	<ul class="nav nav-pills nav-stacked">
+      {{ range .Site.RegularPages }}
+        <li><a href="{{ .Permalink }}">{{ .Params.title | humanize | title }}</a></li>
+      {{ end }}
+    </ul>
+
+{{ end }}

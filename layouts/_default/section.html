@@ -1,0 +1,11 @@
+{{ define "main" }}
+ This is the section list template
+
+ 	<ul class="nav nav-pills nav-stacked">
+      {{ range (where .Site.RegularPages.ByTitle "Section" .Section ) }}
+        <li><a href="{{ .Permalink }}">{{ .Params.title | humanize | title }}</a></li>
+      {{ end }}
+    </ul>
+
+    
+{{ end }}
