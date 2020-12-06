@@ -1,11 +1,11 @@
 {{ define "main" }}
- This is the section list template
+	This is the {{ .Section }} list template
 
- 	<ul class="nav nav-pills nav-stacked">
+	<ul class="nav nav-pills nav-stacked">
       {{ range (where .Site.Pages "Section" .Section) }}
         <li><a href="{{ .Permalink }}">{{ .Permalink }}</a></li>
       {{ end }}
     </ul>
 
-    
+
 {{ end }}

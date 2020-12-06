@@ -1,9 +1,9 @@
 {{ define "main" }}
- This is the list template
+ This is the homepage
 
  	<ul class="nav nav-pills nav-stacked">
       {{ range .Site.Pages }}
-        <li><a href="{{ .Permalink }}">{{ .Params.title | humanize | title }}</a></li>
+        <li><a href="{{ .Permalink }}">{{ .Permalink }}</a></li>
       {{ end }}
     </ul>
 
